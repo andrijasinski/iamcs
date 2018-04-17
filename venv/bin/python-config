@@ -1,4 +1,4 @@
-#!/home/andri/Desktop/KASUTAJALIIDES/venv/bin/python
+#!/home/andri/Desktop/KASUTAJALIIDES/iamcs/venv/bin/python
 
 import sys
 import getopt
