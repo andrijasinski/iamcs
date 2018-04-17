@@ -9,17 +9,21 @@
 </head>
 <body class="bg-light">
     <br><br>
-    <div class="row" align="center">
-        <div class="col"><button>Alarmid</button></div>
-        <div class="col"><button>Positsioonid</button></div>
-        <div class="col"><button>Parameetrid</button></div>
-        <div class="col"><button>CCTV</button></div>
-        <div class="col"><button>Muudetavad sätted</button></div>
-        <div class="col"><button>Hetkeparameetrid</button></div>
-
+    <div class="container">
+        <div class="row" align="center">
+            <div class="col-sm"><button>Alarmid</button></div>
+            <div class="col-sm"><button>Positsioonid</button></div>
+            <div class="col-sm"><button>Parameetrid</button></div>
+            <div class="col-sm"><button>CCTV</button></div>
+            <div class="col-sm"><button>Muudetavad sätted</button></div>
+            <div class="col-sm"><button>Hetkeparameetrid</button></div>
+        </div>
     </div>
-
-
+    <div class="container" >
+        <br><br><br>
+        {% block content %}
+        {% endblock %}
+    </div>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
