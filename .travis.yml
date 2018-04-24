@@ -7,3 +7,8 @@ install:
 - pip install -r requirements.txt
 script:
 - echo "Roses are red"
+deploy:
+  provider: heroku
+  app: iamcs
+  api_key:
+    secure: K8ZuwbbJpHkG/yAA0ICA73kARNyRyIOYm37shgK7UdwJ6YnqDQN+zt0fUe5DQjD033PTIXnpwmmViAXRt0+IUbNcFTCBoWEeI2Yl/TOBWRHxJ3AkmGq5mPpjta2wZuoqmFFvidTGMdNFWv1W8yo7Kshr2FT2zw5+9oljVsnE0jt9ecLSwaB4Hzywkl9Uv9wBcA//tJbg5dvhFwdWf3ka0oTrXI2TJdlw28vBXarSlVdMMWv7UQjhHOi8ct3kVqrC57mW9XoYX+d+YlgepILFbVdl5KluJYbasWdcg+vvOAAhry5276c2VhkOuO/5smTFoq/vXRPXHBSIxIcR2FfXKbNekmUIGHoLyrplUVWpaXWm/wzRU1fWq5/IvWT3CPABf8XMtHB0MuxMs4/qol6GZToiqepDF93Cc8KVcNGxyyZqgkCkPWF2lvHMRpf3GYTyhwP/Ky6OlYAb/ioGkVZLmt0B6jzY+ipLYpBzvuj0d8EvllqQ8sPfjJ9GIFdnqBiT7sy7n3ngHhp4Z5dsf/sXJKfxelPBseyZSkl5PrCjt8uP5e0damr9THyEBqi7y1+U6HaiEGNmFqm7jXlNEaQ8WmcgwOJJMc3ueQCsNeRZzbQBQ06L7LsEKeQV/5Hk+N2gNMu6bAxZ5YInFXqogaFvSvDqnGl2guPj6JTysSHNUG0=
