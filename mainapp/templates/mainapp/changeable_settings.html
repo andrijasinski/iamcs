@@ -4,29 +4,34 @@
 
     {% load staticfiles %}
 
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                <td>Engine Room Ventilation</td>
+                <td>
+                    <div class="btn-group align-middle">
+                        <button type="button" class="btn btn-primary " id="off_button"> OFF </button>
+                        <button type="button" class="btn btn-secondary" id = "on_button"> ON </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Current temperature</td>
+                <td>24°C</td>
+            </tr>
+        </tbody>
+    </table>
 
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-<div class="btn-group align-middle ">
-
-    <button type="button" class="btn btn-primary lg " id="off_button"> OFF </button>
-    <button type="button" class="btn btn-secondary lg" id = "on_button"> ON </button>
-</div>
-
-<script type="text/javascript">
-
-    $('#off_button').on('click', function (e) {
-
-        document.getElementById("on_button").className = "btn btn-secondary lg align-middle";
-        document.getElementById("off_button").className = "btn btn-primary lg align-middle";
-    })
-    $('#on_button').on('click', function (e) {
-
-        document.getElementById("on_button").className = "btn btn-primary lg align-middle";
-        document.getElementById("off_button").className = "btn btn-secondary lg align-middle";
-    })
-</script>
+    <script>
+        $('#off_button').on('click', function (e) {
+            document.getElementById("on_button").className = "btn btn-secondary lg";
+            document.getElementById("off_button").className = "btn btn-primary lg";
+        })
+        $('#on_button').on('click', function (e) {
+            document.getElementById("on_button").className = "btn btn-primary lg";
+            document.getElementById("off_button").className = "btn btn-secondary lg";
+        })
+    </script>
 
 
 {% endblock %}
