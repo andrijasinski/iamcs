@@ -1,6 +1,10 @@
 # IAMCS
 This repository contains code for project in course "User Interface Design" at University of Tartu.
-## Installation
+## Requirements
+* Python 3
+* PIP
+* BASH-terminal or command prompt
+## Running on your local machine
 * Clone this repository
 * `cd iamcs/`
 * `pip install -r requirements.txt`

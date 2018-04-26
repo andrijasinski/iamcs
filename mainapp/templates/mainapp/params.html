@@ -4,4 +4,18 @@
 
     {% load staticfiles %}
 
+    <div class="container">
+        <div class="row">
+            <img class="img-fluid" src="{% static 'mainapp/img/column-chart.png' %}" width="460" height="345">
+            <div class="col"></div>
+            <img class="img-fluid" src="{% static 'mainapp/img/line-chart.png' %}" width="460" height="345">
+        </div>
+        <br>
+        <div class="row">
+            <img class="img-fluid" src="{% static 'mainapp/img/line-chart.png' %}" width="460" height="345">
+            <div class="col"></div>
+            <img class="img-fluid" src="{% static 'mainapp/img/column-chart.png' %}" width="460" height="345">
+        </div>
+    </div>
+
 {% endblock %}

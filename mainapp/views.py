@@ -25,5 +25,5 @@ def changeable_settings(request):
     return render(request, "mainapp/changeable_settings.html")
 
 
-def curr_params(request):
-    return render(request, "mainapp/curr_params.html")
+def curr_settings(request):
+    return render(request, "mainapp/curr_settings.html")
