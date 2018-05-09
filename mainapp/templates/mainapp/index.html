@@ -5,6 +5,7 @@
     {% load staticfiles %}
 
     <span align="center">
+            <br>
         <div class="row">
             {% for params in row1 %}
             <div class="d-none d-md-block col-4">
@@ -12,26 +13,65 @@
             </div>
             {% endfor %}
 
-            {% for params in row1%}
             <span class="d-md-none">
-                <div class="col">
-                    <a href="{{ params.0 }}">
-                    <i class="{{ params.2 }} " style="color: {{ params.3 }}"></i>
-                    </a>
-                </div>
+                <table class="table table-borderless">
+                    <tr>
+                        <td>
+                            <a href="{{ whole.0.0 }}">
+                            <i class="{{ whole.0.2 }}" style="color: {{ whole.0.3 }}"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ whole.1.0 }}">
+                            <i class="{{ whole.1.2 }}" style="color: {{ whole.1.3 }}"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="{{ whole.2.0 }}">
+                            <i class="{{ whole.2.2 }}" style="color: {{ whole.2.3 }}"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ whole.3.0 }}">
+                            <i class="{{ whole.3.2 }}" style="color: {{ whole.3.3 }}"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="{{ whole.4.0 }}">
+                            <i class="{{ whole.4.2 }}" style="color: {{ whole.4.3 }}"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ whole.5.0 }}">
+                            <i class="{{ whole.5.2 }}" style="color: {{ whole.5.3 }}"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
             </span>
-            {% endfor %}
-            {% for params in row2%}
-            <span class="d-md-none">
-                <div class="col">
-                    <a href="{{ params.0 }}">
-                    <i class="{{ params.2 }}" style="color: {{ params.3 }}"></i>
-                    </a>
-                </div>
-            </span>
-            {% endfor %}
+            <!--{% for params in row1%}-->
+            <!--<span class="d-md-none">-->
+                <!--<div class="col">-->
+                    <!--<a href="{{ params.0 }}">-->
+                    <!--<i class="{{ params.2 }} " style="color: {{ params.3 }}"></i>-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</span>-->
+            <!--{% endfor %}-->
+            <!--{% for params in row2%}-->
+            <!--<span class="d-md-none">-->
+                <!--<div class="col">-->
+                    <!--<a href="{{ params.0 }}">-->
+                    <!--<i class="{{ params.2 }}" style="color: {{ params.3 }}"></i>-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</span>-->
+            <!--{% endfor %}-->
         </div>
-            <br>
         <div class="row">
             {% for params in row2 %}
                 <div class="d-none d-md-block col-4">
