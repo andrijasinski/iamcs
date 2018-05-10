@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing</title>
+</head>
+<body>
+
+<table style="width:40%;border: 1px solid black;padding:10px;text-align:center;font-family:Trebuchet MS, Helvetica, sans-serif;font-size:1.5em">
+    <tr>
+        <th>Time</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+    </tr>
+    <tr>
+        <td>26.04.2018 17:33:31</td>
+        <td>58.2157</td>
+        <td>22.3950</td>
+    </tr>
+    <tr>
+        <td>27.04.2018 04:14:47</td>
+        <td>57.0178</td>
+        <td>23.4201</td>
+    </tr>
+</table>
+
+
+
+<div id="map" style="width:400px;height:400px;background:yellow"></div>
+
+<script>
+    function myMap() {
+
+        // Custom stiil kaardi jaoks
+        var styledMapType = new google.maps.StyledMapType([
+            {
+                "featureType": "administrative.land_parcel",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.neighborhood",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "stylers": [
+                    {
+                        "color": "#0080ff"
+                    },
+                    {
+                        "saturation": 15
+                    },
+                    {
+                        "lightness": 10
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            }
+        ],
+            {name:'Custom'});
+
+        var one_position = new google.maps.LatLng(58.215819, 22.395157);
+        var mapOptions = {
+            center: one_position,
+            zoom: 13,
+            mapTypeControlOptions: {
+                mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                    'custom_map']
+            }
+        }
+
+
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+
+        // Laeva asukohta näitav marker
+        var marker = new google.maps.Marker({
+            position: one_position,
+            map: map,
+            title: 'Hello World!'
+        });
+
+        // Sisse zoomimine, kui markeri peale vajutatakse
+        marker.addListener('click', function() {
+            map.setZoom(16);
+            map.setCenter(marker.getPosition());
+        });
+
+        map.mapTypes.set('custom_map', styledMapType);
+        map.setMapTypeId('custom_map');
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4j4cYUerkMwgfRZGFDswfAqMYVnLUTsk&callback=myMap"></script>
+
+</body>
+</html>
