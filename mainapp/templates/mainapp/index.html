@@ -5,11 +5,10 @@
     {% load staticfiles %}
 
     <span align="center">
-            <br>
         <div class="row">
             {% for params in row1 %}
             <div class="d-none d-md-block col-4">
-                <a href="{{ params.0 }}"><img class="img" src="{% static params.1  %}" width="285" height="275"></a>
+                <a href="{{ params.0 }}"><img class="img" src="{% static params.1 %}"></a>
             </div>
             {% endfor %}
 
@@ -55,94 +54,15 @@
                     </tbody>
                 </table>
             </span>
-            <!--{% for params in row1%}-->
-            <!--<span class="d-md-none">-->
-                <!--<div class="col">-->
-                    <!--<a href="{{ params.0 }}">-->
-                    <!--<i class="{{ params.2 }} " style="color: {{ params.3 }}"></i>-->
-                    <!--</a>-->
-                <!--</div>-->
-            <!--</span>-->
-            <!--{% endfor %}-->
-            <!--{% for params in row2%}-->
-            <!--<span class="d-md-none">-->
-                <!--<div class="col">-->
-                    <!--<a href="{{ params.0 }}">-->
-                    <!--<i class="{{ params.2 }}" style="color: {{ params.3 }}"></i>-->
-                    <!--</a>-->
-                <!--</div>-->
-            <!--</span>-->
-            <!--{% endfor %}-->
         </div>
+        <br>
         <div class="row">
             {% for params in row2 %}
                 <div class="d-none d-md-block col-4">
-                    <a href="{{ params.0 }}"><img class="img" src="{% static params.1  %}" width="285" height="275"></a>
+                    <a href="{{ params.0 }}"><img class="img" src="{% static params.1 %}"></a>
                 </div>
             {% endfor %}
         </div>
-
-        <!--<div class="row">-->
-            <!--{% for params in row2 %}-->
-            <!--<div class="d-none d-md-block col-4">-->
-                <!--<a href="{{ params.0 }}"><img class="img" src="{% static params.1 %}" width="285" height="275"></a>-->
-            <!--</div>-->
-            <!--{% endfor %}-->
-            <!--<div class="d-none d-md-block col-4">-->
-                <!--<a href="/cctv"><img class="img" src="{% static 'mainapp/img/sample.png' %}" width="285" height="275"></a>-->
-            <!--</div>-->
-            <!--<div class="d-none d-md-block col-4">-->
-                <!--<a href="/changeable_settings"><img class="img" src="{% static 'mainapp/img/sample.png' %}" width="285" height="275"></a>-->
-            <!--</div>-->
-            <!--<div class="d-none d-md-block col-4">-->
-                <!--<a href="/curr_settings"><img class="img" src="{% static 'mainapp/img/sample.png' %}" width="285" height="275"></a>-->
-            <!--</div>-->
-
-            <!-- 285x275 -->
-            <!--{% for params in row %}-->
-                <!--<div class="d-none d-md-block col-4">-->
-                    <!--{% if params.0 == "/alarms" %}-->
-                        <!--<div class="row">-->
-                    <!--{% elif params.0 == "/cctv" %}-->
-                        <!--</div>-->
-                        <!--<div class="row">-->
-                    <!--{% endif %}-->
-                    <!--<a href="{{ params.0 }}">-->
-                        <!--<img class="img" src="{% static params.1 %}" width="285" height="275">-->
-                    <!--</a>-->
-                    <!--{% if params.0 == "/curr_settings" %}-->
-                        <!--</div>-->
-                    <!--{% endif %}-->
-                <!--</div>-->
-
-            <!--{% endfor %}-->
-        <!--</div>-->
-
-        <!--<span class="d-md-none">-->
-            <!--<div class="col-sm-6">-->
-                <!--<a href="{{ params.0 }}">-->
-                <!--<i class="{{ params.2 }}" style="color: {{ params.3 }}"></i>-->
-                <!--</a>-->
-            <!--</div>-->
-        <!--</span>-->
-        <!--<br>-->
-
-        <!--<div class="row">-->
-            <!--{% for params in row2 %}-->
-                <!--<div class="d-none d-md-block col-4">-->
-                    <!--<a href="{{ params.0 }}">-->
-                        <!--<img class="img" src="{% static params.1 %}" width="285" height="275">-->
-                    <!--</a>-->
-                <!--</div>-->
-                <!--<span class="d-md-none">-->
-                    <!--<div class="col-sm-6">-->
-                        <!--<a href="{{ params.0 }}">-->
-                        <!--<i class="{{ params.2 }}" style="color: {{ params.3 }}"></i>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                <!--</span>-->
-            <!--{% endfor %}-->
-        <!--</div>-->
     </span>
 
 {% endblock %}

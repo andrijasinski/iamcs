@@ -11,7 +11,7 @@ def index(request):
 
     row2 =[
         ['/cctv', 'mainapp/img/CCTV.png', 'fas fa-video fa-%sx fa-fw' % icon_size, 'DarkTurquoise '],
-        ['/changeable_settings', 'mainapp/img/Sätted.png', 'fas fa-toggle-on fa-%sx fa-fw' % icon_size, 'SlateGray'],
+        ['/changeable_settings', 'mainapp/img/S2tted.png', 'fas fa-toggle-on fa-%sx fa-fw' % icon_size, 'SlateGray'],
         ['/curr_settings', 'mainapp/img/Hetkeparameetrid.png', 'fas fa-clipboard-list fa-%sx fa-fw' % icon_size, '#ed8f6d']
     ]
     return render(request, "mainapp/index.html", {"row1": row1, "row2": row2, "whole": row1 + row2})
