@@ -2,16 +2,16 @@ from django.shortcuts import render
 
 
 def index(request):
-    icon_size = 9
+    icon_size = 10
     row1 = [
         ['/alarms', 'mainapp/img/Alarmid.png', 'fas fa-exclamation-triangle fa-%sx fa-fw' % icon_size, 'tomato'],
         ['/positions', 'mainapp/img/Positsioonid.png', 'fas fa-map-marker-alt fa-%sx fa-fw' % icon_size, 'PaleGreen'],
-        ['/params', 'mainapp/img/Parameetrid.png', 'fas fa-chart-line fa-%sx fa-fw' % icon_size, 'BlueViolet'],
+        ['/params', 'mainapp/img/Parameetrid.png', 'fas fa-chart-line fa-%sx fa-fw' % icon_size, 'MediumPurple'],
     ]
 
-    row2 =[
-        ['/cctv', 'mainapp/img/CCTV.png', 'fas fa-video fa-%sx fa-fw' % icon_size, 'DarkTurquoise '],
-        ['/changeable_settings', 'mainapp/img/S2tted.png', 'fas fa-toggle-on fa-%sx fa-fw' % icon_size, 'SlateGray'],
+    row2 = [
+        ['/cctv', 'mainapp/img/CCTV.png', 'fas fa-video fa-%sx fa-fw' % icon_size, 'DarkTurquoise'],
+        ['/changeable_settings', 'mainapp/img/S2tted.png', 'fas fa-toggle-on fa-%sx fa-fw' % icon_size, 'SkyBlue'],
         ['/curr_settings', 'mainapp/img/Hetkeparameetrid.png', 'fas fa-clipboard-list fa-%sx fa-fw' % icon_size, '#ed8f6d']
     ]
     return render(request, "mainapp/index.html", {"row1": row1, "row2": row2, "whole": row1 + row2})
