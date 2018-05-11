@@ -5,7 +5,7 @@ def index(request):
     icon_size = 9
     row1 = [
         ['/alarms', 'mainapp/img/Alarmid.png', 'fas fa-exclamation-triangle fa-%sx fa-fw' % icon_size, 'tomato'],
-        ['/positions', 'mainapp/img/Positsioonid.png', 'fas fa-map-marker-alt fa-%sx fa-fw' % icon_size, 'SpringGreen'],
+        ['/positions', 'mainapp/img/Positsioonid.png', 'fas fa-map-marker-alt fa-%sx fa-fw' % icon_size, 'PaleGreen'],
         ['/params', 'mainapp/img/Parameetrid.png', 'fas fa-chart-line fa-%sx fa-fw' % icon_size, 'BlueViolet'],
     ]
 
